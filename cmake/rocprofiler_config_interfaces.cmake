@@ -175,7 +175,7 @@ target_link_libraries(rocprofiler-amd-comgr INTERFACE amd_comgr)
 #
 # ----------------------------------------------------------------------------------------#
 
-target_link_libraries(rocprofiler-ptl INTERFACE PTL::ptl-static)
+target_link_libraries(rocprofiler-ptl INTERFACE PTL::ptl-shared)
 
 # ----------------------------------------------------------------------------------------#
 #

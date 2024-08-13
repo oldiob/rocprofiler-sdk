@@ -41,7 +41,6 @@ add_subdirectory(hip)
 add_subdirectory(code_object)
 add_subdirectory(context)
 add_subdirectory(counters)
-add_subdirectory(aql)
 add_subdirectory(pc_sampling)
 add_subdirectory(marker)
 add_subdirectory(thread_trace)
@@ -58,7 +57,6 @@ target_link_libraries(
             rocprofiler-sdk::rocprofiler-memcheck
             rocprofiler-sdk::rocprofiler-common-library
             rocprofiler-sdk::rocprofiler-amd-comgr
-            rocprofiler-sdk::rocprofiler-hsa-aql
             rocprofiler-sdk::rocprofiler-drm
             rocprofiler-sdk::rocprofiler-hsakmt-nolink)
 

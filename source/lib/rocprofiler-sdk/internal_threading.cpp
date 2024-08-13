@@ -61,16 +61,7 @@ auto affinity_functor(intmax_t)
 auto
 get_thread_pool_config()
 {
-    return thread_pool_config_t{.init         = true,
-                                .use_tbb      = false,
-                                .use_affinity = false,
-                                .verbose      = 0,
-                                .priority     = 0,
-                                .pool_size    = 1,
-                                .task_queue   = nullptr,
-                                .set_affinity = affinity_functor,
-                                .initializer  = []() {},
-                                .finalizer    = []() {}};
+    return thread_pool_config_t();
 }
 }  // namespace
 

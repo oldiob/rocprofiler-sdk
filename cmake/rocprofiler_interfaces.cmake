@@ -16,8 +16,6 @@ rocprofiler_add_interface_library(
     rocprofiler-build-flags "Provides generalized build flags for rocprofiler" INTERNAL)
 rocprofiler_add_interface_library(rocprofiler-threading "Enables multithreading support"
                                   INTERNAL)
-rocprofiler_add_interface_library(rocprofiler-perfetto "Enables Perfetto support"
-                                  INTERNAL)
 rocprofiler_add_interface_library(rocprofiler-cereal "Enables Cereal support" INTERNAL)
 rocprofiler_add_interface_library(rocprofiler-compile-definitions "Compile definitions"
                                   INTERNAL)

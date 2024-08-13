@@ -102,7 +102,15 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/${CMAKE_INSTALL_BINDIR
 enable_testing()
 include(CTest)
 
-add_subdirectory(external)
+find_package(glog REQUIRED)
+target_link_libraries(rocprofiler-glog INTERFACE glog::glog)
+find_package(fmt REQUIRED)
+target_link_libraries(rocprofiler-fmt INTERFACE fmt::fmt)
+find_package(PTL REQUIRED)
+target_link_libraries(rocprofiler-ptl INTERFACE PTL::ptl-shared)
+find_package(cereal REQUIRED)
+target_link_libraries(rocprofiler-cereal INTERFACE cereal::cereal)
+
 add_subdirectory(source)
 
 include(rocprofiler_config_install)
@@ -116,6 +124,5 @@ if(ROCPROFILER_BUILD_SAMPLES)
     add_subdirectory(samples)
 endif()
 
-include(rocprofiler_config_packaging)
 
 rocprofiler_print_features()
